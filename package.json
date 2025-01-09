@@ -12,6 +12,7 @@
     "vite": "^6.0.1"
   },
   "dependencies": {
-    "lesspass": "^9.2.0"
+    "lesspass": "^9.2.0",
+    "vite-plugin-singlefile": "^2.1.0"
   }
 }
