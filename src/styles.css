@@ -415,15 +415,26 @@ a:hover {
   }
 }
 
-/* Custom styles*/
+@media (min-width: 600px) {
+  .md\:d-f {
+    display: flex;
+  }
+  
+  .md\:g-16px {
+    gap: 16px;
+  }
+  
+  .md\:w-50\%{
+    width: 50%;
+  }
+}
 
 * {
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#app {
-  max-width: 400px;
+main {
   margin: 0 auto;
 }
 

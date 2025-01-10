@@ -6,57 +6,108 @@
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📴</text></svg>"
     />
-    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="stylesheet" href="./src/styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LessPass Offline Version</title>
+    <title>HTML Standalone Lesspass</title>
   </head>
   <body>
-    <div id="app">
-      <h1>📴 LessPass Offline Version</h1>
-      <form id="form">
-        <input required type="text" name="site" placeholder="Local" />
-        <input required type="text" name="login" placeholder="Username" />
-        <input
-          required
-          type="password"
-          name="password"
-          placeholder="Master password"
-        />
-        <div>
-          <label><input type="checkbox" name="lowercase" checked /> a-z </label>
-          <label><input type="checkbox" name="uppercase" checked /> A-Z </label>
-          <label><input type="checkbox" name="digits" checked /> 0-9 </label>
-          <label><input type="checkbox" name="symbols" checked /> %!@ </label>
-        </div>
-        <div>
-          <small>Length</small>
-          <br />
+    <main class="md:d-f md:g-16px">
+      <div class="md:w-50%">
+        <h1>📴 HTML Standalone Lesspass</h1>
+        <form id="form">
+          <input required type="text" name="site" placeholder="Local" />
+          <input required type="text" name="login" placeholder="Username" />
           <input
             required
-            type="number"
-            name="length"
-            value="16"
-            placeholder="Length"
+            type="password"
+            name="password"
+            placeholder="Master password"
           />
-        </div>
-        <div>
-          <small>Counter</small>
-          <br />
-          <input
-            required
-            type="number"
-            name="counter"
-            value="1"
-            placeholder="Counter"
-          />
-        </div>
-        <button type="submit">Generate and copy</button>
-      </form>
-    </div>
+          <div>
+            <label
+              ><input type="checkbox" name="lowercase" checked /> a-z
+            </label>
+            <label
+              ><input type="checkbox" name="uppercase" checked /> A-Z
+            </label>
+            <label><input type="checkbox" name="digits" checked /> 0-9 </label>
+            <label><input type="checkbox" name="symbols" checked /> %!@ </label>
+          </div>
+          <div>
+            <small>Length</small>
+            <br />
+            <input
+              required
+              type="number"
+              name="length"
+              value="16"
+              placeholder="Length"
+            />
+          </div>
+          <div>
+            <small>Counter</small>
+            <br />
+            <input
+              required
+              type="number"
+              name="counter"
+              value="1"
+              placeholder="Counter"
+            />
+          </div>
+          <button type="submit">Generate and copy</button>
+        </form>
+      </div>
+
+      <div class="md:w-50%">
+        <br />
+        <br />
+        <hr />
+        <br />
+
+        <h2>About</h2>
+
+        <p>
+          This is a lightweight, standalone HTML version of the
+          <a href="https://www.lesspass.com/#/" target="_blank">Less Pass</a>
+          password manager. In this version, you can download the single HTML
+          file from this page and have your favorite password manager with you
+          forever, without depending on the website, repository, internet
+          connection and without the need to install any app on your phone. Your
+          system only needs a modern browser. You can also back up this file
+          wherever you want.
+        </p>
+
+        <h2>How to use this version</h2>
+
+        <p>
+          It's simple. Just download this page in this link and open in your
+          favorite browser(I recommend chrome but other browsers should work)
+        </p>
+
+        <h2>How it works</h2>
+
+        <p>
+          You can know how it work
+          <a
+            href="https://blog.lesspass.com/2016-10-19/how-does-it-work"
+            target="_blank"
+            >here</a
+          >.
+        </p>
+      </div>
+    </main>
 
     <input id="hiddenPass" type="text" style="display: none" />
 
     <div id="snackbar">Copied</div>
+
+    <footer>
+      <hr>
+      <br>
+      <a href="https://github.com/RodrigoWebDev/lessPass-standalone-html" target="_blank">&lt;/&gt; Source code</a> 
+      <br>
+    </footer>
 
     <script type="module" src="./src/index.js"></script>
   </body>
