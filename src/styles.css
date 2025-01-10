@@ -116,6 +116,7 @@ a[href^="sms\:"]::before {
   content: "💬 ";
 }
 button,
+
 input[type="button"],
 input[type="checkbox"],
 input[type="radio"],
@@ -221,6 +222,7 @@ label {
   display: inline-block;
 }
 button,
+
 input:not([type="checkbox"]):not([type="radio"]),
 input[type="range"] {
   -webkit-appearance: none;
@@ -229,11 +231,11 @@ input:focus {
   box-shadow: 0 0 0 2px #0096bfab;
   box-shadow: 0 0 0 2px var(--focus);
 }
-button:focus {
+button:focus:focus {
   box-shadow: 0 0 0 2px #0096bfab;
   box-shadow: 0 0 0 2px var(--focus);
 }
-button:active,
+button:active:active,
 input[type="button"]:active,
 input[type="checkbox"]:active,
 input[type="radio"]:active,
@@ -242,7 +244,7 @@ input[type="reset"]:active,
 input[type="submit"]:active {
   transform: translateY(2px);
 }
-button:disabled,
+button:disabled:disabled,
 input:disabled {
   cursor: not-allowed;
   opacity: 0.5;
