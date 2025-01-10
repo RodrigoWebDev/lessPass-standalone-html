@@ -49,15 +49,3 @@ myForm.addEventListener("submit", async (e) => {
   }
 });
 
-downloadLink.addEventListener("click", () => {
-  save()
-});
-
-function save() {
-  const data = "<!DOCTYPE html>\n"+document.documentElement.outerHTML; // See sources below for why this gets the entire page content.
-  const link = document.createElement('a');
-  link.setAttribute('download', 'default_download_name.html');
-  link.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(data));
-  link.click(); // In my tests, there was no need to add the element to the document for this to work.
-}
-

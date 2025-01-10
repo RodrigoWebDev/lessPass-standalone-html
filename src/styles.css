@@ -422,12 +422,16 @@ a:hover {
     display: flex;
   }
   
-  .md\:g-16px {
-    gap: 16px;
+  .md\:g-24px {
+    gap: 24px;
   }
   
   .md\:w-50\%{
     width: 50%;
+  }
+
+  .md\:d-n {
+    display: none;
   }
 }
 
