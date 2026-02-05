@@ -39,13 +39,23 @@ myForm.addEventListener("submit", async (e) => {
 
     const pass = await lesspass.generatePassword(
       passwordProfile,
-      formValues["password"]
+      formValues["password"],
     );
     copyPass(pass);
+
+    getById("passwordContainer").style.display = "block";
+
+    getById("passwordDisplay").textContent = pass;
+
+    getById("showPasswordButton").addEventListener("click", () => {
+      const passwordDisplay = getById("passwordDisplay");
+      const passwordLock = getById("passwordLock");
+      passwordDisplay.style.display = "block";
+      passwordLock.style.display = "none";
+    });
 
     showSnackBar();
   } else {
     alert("Select at least one checkbox");
   }
 });
-

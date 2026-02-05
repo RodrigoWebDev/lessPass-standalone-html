@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,10 +15,13 @@
       <div class="md:w-50%">
         <h1>📴 HTML Standalone Lesspass</h1>
 
-        <a href="https://drive.google.com/uc?export=download&id=1RgKE48S3Ed74n30RfRqoPBeHXgJfrxGX">⬇️ Download it here.</a>
+        <a
+          href="https://drive.google.com/uc?export=download&id=1RgKE48S3Ed74n30RfRqoPBeHXgJfrxGX"
+          >⬇️ Download it here.</a
+        >
 
-        <br>
-        <br>
+        <br />
+        <br />
 
         <form id="form">
           <input required type="text" name="site" placeholder="🌐 Local" />
@@ -62,6 +65,14 @@
             />
           </div>
           <button type="submit">⚡ Generate and copy</button>
+
+          <div id="passwordContainer" style="display: none">
+            <br />
+            <div id="passwordLock">****************</div>
+            <div id="passwordDisplay" style="display: none"></div>
+            <br />
+            <button type="button" id="showPasswordButton">Show password</button>
+          </div>
         </form>
       </div>
 
@@ -89,8 +100,13 @@
         <h2>📜 How to use this version</h2>
 
         <p>
-          It's simple. Just download this page in <a href="https://drive.google.com/uc?export=download&id=1RgKE48S3Ed74n30RfRqoPBeHXgJfrxGX">⬇️ this link</a> and open the file in your
-          favorite browser(I recommend chrome but other browsers should work)
+          It's simple. Just download this page in
+          <a
+            href="https://drive.google.com/uc?export=download&id=1RgKE48S3Ed74n30RfRqoPBeHXgJfrxGX"
+            >⬇️ this link</a
+          >
+          and open the file in your favorite browser(I recommend chrome but
+          other browsers should work)
         </p>
 
         <h2>🤔 How it works</h2>
@@ -111,10 +127,18 @@
     <div id="snackbar">Copied</div>
 
     <footer>
-      <hr>
-      <br>
-      <a href="https://github.com/RodrigoWebDev/lessPass-standalone-html" target="_blank">&lt;/&gt; Source code 🐱</a> developed by <a href="https://github.com/RodrigoWebDev" target="_blank">👨🏻‍💻 Rodrigo Queiroz</a>
-      <br>
+      <hr />
+      <br />
+      <a
+        href="https://github.com/RodrigoWebDev/lessPass-standalone-html"
+        target="_blank"
+        >&lt;/&gt; Source code 🐱</a
+      >
+      developed by
+      <a href="https://github.com/RodrigoWebDev" target="_blank"
+        >👨🏻‍💻 Rodrigo Queiroz</a
+      >
+      <br />
     </footer>
 
     <script type="module" src="./src/index.js"></script>
