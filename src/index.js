@@ -22,6 +22,23 @@ const showSnackBar = () => {
   }, 3000);
 };
 
+const downloadHTMLPage = () => {
+  const htmlContent = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+  const blob = new Blob([htmlContent], { type: "text/html" });
+  const a = document.createElement("a");
+
+  a.href = URL.createObjectURL(blob);
+  a.download = "pass_manager.html";
+  a.click();
+  URL.revokeObjectURL(a.href);
+};
+
+document.querySelectorAll("[data-id='download-html']").forEach((el) => {
+  el.addEventListener("click", () => {
+    downloadHTMLPage();
+  });
+});
+
 myForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
