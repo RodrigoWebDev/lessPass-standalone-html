@@ -1,12 +1,17 @@
 # 📴 HTML Standalone Lesspass
 
-[Download it here](https://drive.google.com/uc?export=download&id=1RgKE48S3Ed74n30RfRqoPBeHXgJfrxGX)  or go to the [🌐 website](https://lesspass-standalone-html.netlify.app/).
+This is a lightweight, standalone HTML version of the [Lesspass](https://www.lesspass.com/#/) password manager. In this version, you can download the single HTML file and have your favorite password manager with you forever, without depending on the website, repository, internet connection and without the need to install any app on your OS. Your system only needs a modern browser(preferably Chrome). You can also back up this file wherever you want.
 
-This is a lightweight, standalone HTML version of the [Lesspass](https://www.lesspass.com/#/) password manager. In this version, you can download the single HTML file and have your favorite password manager with you forever, without depending on the website, repository, internet connection and without the need to install any app on your OS. Your system only needs a modern browser. You can also back up this file wherever you want.
+## 📜 Instrunctions
 
-## 📜 How to use this version
+### How to download the file
 
-It's simple. You can download it from [here](https://drive.google.com/uc?export=download&id=1RgKE48S3Ed74n30RfRqoPBeHXgJfrxGX) and open it in your browser app or use the [🌐 website](https://lesspass-standalone-html.netlify.app/)
+1. Open the website and click the "download" button, or...
+2. Go to the `dist` folder (or [click here](https://github.com/RodrigoWebDev/lessPass-standalone-html/blob/main/dist)) and download the `index.html` file.
+
+### How to use this file
+
+Just open it in your browser, preferably Chrome, since I developed this using Chrome for testing.
 
 ## 🤔 How it works
 
