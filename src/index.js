@@ -1,6 +1,7 @@
 import lesspass from "lesspass";
 
 const getById = (el) => document.getElementById(el);
+let isPasswordVisible = false;
 
 const myForm = getById("form");
 const downloadLink = getById("download");
@@ -39,6 +40,13 @@ document.querySelectorAll("[data-id='download-html']").forEach((el) => {
   });
 });
 
+getById("clearPasswordButton").addEventListener("click", () => {
+  getById("passwordContainer").style.display = "none";
+  getById("passwordDisplay").textContent = "";
+  getById("showPasswordButton").textContent = "👀 Show password";
+  isPasswordVisible = false;
+});
+
 myForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const formData = new FormData(e.target);
@@ -58,6 +66,7 @@ myForm.addEventListener("submit", async (e) => {
       passwordProfile,
       formValues["password"],
     );
+
     copyPass(pass);
 
     getById("passwordContainer").style.display = "block";
@@ -67,8 +76,18 @@ myForm.addEventListener("submit", async (e) => {
     getById("showPasswordButton").addEventListener("click", () => {
       const passwordDisplay = getById("passwordDisplay");
       const passwordLock = getById("passwordLock");
-      passwordDisplay.style.display = "block";
-      passwordLock.style.display = "none";
+
+      if (isPasswordVisible) {
+        getById("showPasswordButton").textContent = "👀 Show password";
+        passwordDisplay.style.display = "none";
+        passwordLock.style.display = "block";
+        isPasswordVisible = false;
+      } else {
+        getById("showPasswordButton").textContent = "🙈 Hide password";
+        passwordDisplay.style.display = "block";
+        passwordLock.style.display = "none";
+        isPasswordVisible = true;
+      }
     });
 
     showSnackBar();
