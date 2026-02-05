@@ -6,7 +6,7 @@ This is a lightweight, standalone HTML version of the [Lesspass](https://www.les
 
 ### How to download the file
 
-1. Open the website and click the "download" button, or...
+1. Open the [website](https://lesspass-standalone-html.netlify.app/) and click the "Download this page" button, or...
 2. Go to the `dist` folder (or [click here](https://github.com/RodrigoWebDev/lessPass-standalone-html/blob/main/dist)) and download the `index.html` file.
 
 ### How to use this file
