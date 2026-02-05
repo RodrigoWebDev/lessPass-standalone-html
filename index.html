@@ -23,9 +23,22 @@
         <h2>🗝️ Fill the form bellow to generate your password</h2>
 
         <form id="form">
-          <input required type="text" name="site" placeholder="🌐 Local" />
-          <input required type="text" name="login" placeholder="👤 Username" />
           <input
+            id="siteInput"
+            required
+            type="text"
+            name="site"
+            placeholder="🌐 Local"
+          />
+          <input
+            id="loginInput"
+            required
+            type="text"
+            name="login"
+            placeholder="👤 Username"
+          />
+          <input
+            id="passwordInput"
             required
             type="password"
             name="password"
@@ -121,7 +134,9 @@
         </p>
         <p>
           If you want to clear the password, click the "🧹 Clear password"
-          button.
+          button. After 30 seconds, the password will be cleared automatically
+          if you don't clear it manually. This is a security measure to prevent
+          your password from being exposed for too long.
         </p>
 
         <p>

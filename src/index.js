@@ -91,6 +91,17 @@ myForm.addEventListener("submit", async (e) => {
     });
 
     showSnackBar();
+
+    setTimeout(() => {
+      getById("passwordLock").style.display = "block";
+      getById("passwordDisplay").style.display = "none";
+      getById("showPasswordButton").textContent = "👀 Show password";
+      getById("passwordDisplay").textContent = "";
+      getById("passwordContainer").style.display = "none";
+      getById("form").reset();
+
+      isPasswordVisible = false;
+    }, 30000);
   } else {
     alert("Select at least one checkbox");
   }
