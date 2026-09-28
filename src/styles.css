@@ -486,6 +486,10 @@ a:hover {
   text-align: center;
 }
 
+.m-0-a {
+  margin: 0 auto;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
