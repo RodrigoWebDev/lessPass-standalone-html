@@ -1,10 +1,11 @@
 import lesspass from "lesspass";
 
 const getById = (el) => document.getElementById(el);
-let isPasswordVisible = false;
-
+const passwordDisplay = getById("passwordDisplay");
+const passwordLock = getById("passwordLock");
 const myForm = getById("form");
-const downloadLink = getById("download");
+let clearPasswordTimeout;
+let isPasswordVisible = false;
 
 const copyPass = (pass) => {
   const copyText = getById("hiddenPass");
@@ -34,17 +35,46 @@ const downloadHTMLPage = () => {
   URL.revokeObjectURL(a.href);
 };
 
+const clearForm = () => {
+  getById("passwordLock").style.display = "block";
+  getById("passwordDisplay").style.display = "none";
+  getById("showPasswordButton").textContent = "👀 Show password";
+  getById("passwordDisplay").textContent = "";
+  getById("passwordContainer").style.display = "none";
+  getById("form").reset();
+
+  isPasswordVisible = false;
+};
+
+const resetFormAfterSeconds = (seconds = 5) => {
+  clearPasswordTimeout = setTimeout(() => {
+    clearForm();
+  }, seconds * 1000);
+};
+
+const showPassword = () => {
+  getById("showPasswordButton").textContent = "👀 Show password";
+  passwordDisplay.style.display = "none";
+  passwordLock.style.display = "block";
+  isPasswordVisible = false;
+};
+
+const hidePassword = () => {
+  getById("showPasswordButton").textContent = "🙈 Hide password";
+  passwordDisplay.style.display = "block";
+  passwordLock.style.display = "none";
+  isPasswordVisible = true;
+};
+
 document.querySelectorAll("[data-id='download-html']").forEach((el) => {
   el.addEventListener("click", () => {
     downloadHTMLPage();
   });
 });
 
-getById("clearPasswordButton").addEventListener("click", () => {
-  getById("passwordContainer").style.display = "none";
-  getById("passwordDisplay").textContent = "";
-  getById("showPasswordButton").textContent = "👀 Show password";
-  isPasswordVisible = false;
+getById("clearForm").addEventListener("click", () => {
+  clearTimeout(clearPasswordTimeout);
+  clearForm();
 });
 
 myForm.addEventListener("submit", async (e) => {
@@ -73,36 +103,18 @@ myForm.addEventListener("submit", async (e) => {
 
     getById("passwordDisplay").textContent = pass;
 
-    getById("showPasswordButton").addEventListener("click", () => {
-      const passwordDisplay = getById("passwordDisplay");
-      const passwordLock = getById("passwordLock");
-
-      if (isPasswordVisible) {
-        getById("showPasswordButton").textContent = "👀 Show password";
-        passwordDisplay.style.display = "none";
-        passwordLock.style.display = "block";
-        isPasswordVisible = false;
-      } else {
-        getById("showPasswordButton").textContent = "🙈 Hide password";
-        passwordDisplay.style.display = "block";
-        passwordLock.style.display = "none";
-        isPasswordVisible = true;
-      }
-    });
-
     showSnackBar();
 
-    setTimeout(() => {
-      getById("passwordLock").style.display = "block";
-      getById("passwordDisplay").style.display = "none";
-      getById("showPasswordButton").textContent = "👀 Show password";
-      getById("passwordDisplay").textContent = "";
-      getById("passwordContainer").style.display = "none";
-      getById("form").reset();
-
-      isPasswordVisible = false;
-    }, 30000);
+    resetFormAfterSeconds();
   } else {
     alert("Select at least one checkbox");
+  }
+});
+
+getById("showPasswordButton").addEventListener("click", () => {
+  if (isPasswordVisible) {
+    showPassword();
+  } else {
+    hidePassword();
   }
 });

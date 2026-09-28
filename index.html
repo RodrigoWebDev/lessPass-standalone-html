@@ -11,149 +11,160 @@
     <title>HTML Standalone Lesspass</title>
   </head>
   <body>
-    <main class="md:d-f md:g-24px">
-      <div class="md:w-50%">
-        <h1>📴 HTML Standalone Lesspass</h1>
+    <main class="mw-600px">
+      <div>
+        <div>
+          <h1>📴 HTML Standalone Lesspass</h1>
 
-        <button data-id="download-html">⬇️ Download this page.</button>
-        <br />
-
-        <hr />
-
-        <h2>🗝️ Fill the form bellow to generate your password</h2>
-
-        <form id="form">
-          <input
-            id="siteInput"
-            required
-            type="text"
-            name="site"
-            placeholder="🌐 Local"
-          />
-          <input
-            id="loginInput"
-            required
-            type="text"
-            name="login"
-            placeholder="👤 Username"
-          />
-          <input
-            id="passwordInput"
-            required
-            type="password"
-            name="password"
-            placeholder="🔑 Master password"
-          />
-          <div>
-            <label
-              ><input type="checkbox" name="lowercase" checked /> a-z
-            </label>
-            <label
-              ><input type="checkbox" name="uppercase" checked /> A-Z
-            </label>
-            <label><input type="checkbox" name="digits" checked /> 0-9 </label>
-            <label><input type="checkbox" name="symbols" checked /> %!@ </label>
-          </div>
-          <div>
-            <small>📏 Length</small>
-            <br />
-            <input
-              required
-              type="number"
-              name="length"
-              value="16"
-              placeholder="Length"
-            />
-          </div>
-          <div>
-            <small>🎰 Counter</small>
-            <br />
-            <input
-              required
-              type="number"
-              name="counter"
-              value="1"
-              placeholder="Counter"
-            />
-          </div>
-          <button type="submit">⚡ Generate and copy</button>
-
-          <div id="passwordContainer" style="display: none">
-            <br />
-            <p>Your password:</p>
-            <div id="passwordLock">****************</div>
-            <div id="passwordDisplay" style="display: none"></div>
-            <br />
-            <button type="button" id="showPasswordButton">
-              👀 Show password
-            </button>
-
-            <button type="button" id="clearPasswordButton">
-              🧹 Clear password
-            </button>
-          </div>
-        </form>
-      </div>
-
-      <div class="md:w-50%">
-        <div class="md:d-n">
+          <button data-id="download-html">⬇️ Download this page.</button>
           <br />
-          <br />
+
           <hr />
-          <br />
+
+          <h2>🗝️ Fill the form bellow to generate your password</h2>
+
+          <form id="form">
+            <input
+              id="siteInput"
+              required
+              type="text"
+              name="site"
+              placeholder="🌐 Local"
+            />
+            <input
+              id="loginInput"
+              required
+              type="text"
+              name="login"
+              placeholder="👤 Username"
+            />
+            <input
+              id="passwordInput"
+              required
+              type="password"
+              name="password"
+              placeholder="🔑 Master password"
+            />
+            <div>
+              <label
+                ><input type="checkbox" name="lowercase" checked /> a-z
+              </label>
+              <label
+                ><input type="checkbox" name="uppercase" checked /> A-Z
+              </label>
+              <label
+                ><input type="checkbox" name="digits" checked /> 0-9
+              </label>
+              <label
+                ><input type="checkbox" name="symbols" checked /> %!@
+              </label>
+            </div>
+            <div>
+              <small>📏 Length</small>
+              <br />
+              <input
+                required
+                type="number"
+                name="length"
+                value="16"
+                placeholder="Length"
+              />
+            </div>
+            <div>
+              <small>🎰 Counter</small>
+              <br />
+              <input
+                required
+                type="number"
+                name="counter"
+                value="1"
+                placeholder="Counter"
+              />
+            </div>
+            <button type="submit">⚡ Generate and copy</button>
+
+            <div id="passwordContainer" style="display: none">
+              <br />
+              <p>Your password:</p>
+              <div id="passwordLock">****************</div>
+              <div id="passwordDisplay" style="display: none"></div>
+              <br />
+              <button type="button" id="showPasswordButton">
+                👀 Show password
+              </button>
+
+              <button type="button" id="clearForm">🧹 Clear</button>
+            </div>
+          </form>
         </div>
 
-        <h2>💬 About</h2>
+        <br />
 
-        <p>
-          This is a lightweight, standalone HTML version of the
-          <a href="https://www.lesspass.com/#/" target="_blank">Less Pass</a>
-          password manager. In this version, you can download the single HTML
-          file from this page and have your favorite password manager with you
-          forever, without depending on the website, repository, internet
-          connection and without the need to install any app on your OS. Your
-          system only needs a modern browser. You can also back up this file
-          wherever you want.
-        </p>
+        <details>
+          <summary class="c-p"><h2 class="d-i">💬 About</h2></summary>
 
-        <h2>📜 How to use this version</h2>
+          <div>
+            <p>
+              This is a lightweight, standalone HTML version of the
+              <a href="https://www.lesspass.com/#/" target="_blank"
+                >Less Pass</a
+              >
+              password manager. In this version, you can download the single
+              HTML file from this page and have your favorite password manager
+              with you forever, without depending on the website, repository,
+              internet connection and without the need to install any app on
+              your OS. Your system only needs a modern browser. You can also
+              back up this file wherever you want.
+            </p>
 
-        <p>
-          If you want to use it offline, click the button
-          <i>"⬇️ Download this page"</i> at the top and open the page file in
-          your browser(I recommend Chrome).
-        </p>
-        <p>
-          Fill the form and click the "⚡ Generate and copy" button. If the
-          password is not copied, try clicking the "👀 Show password" button and
-          then copy it manually.
-        </p>
-        <p>
-          If you want to generate a new password, just change the counter value
-          and click "⚡ Generate and copy" again.
-        </p>
-        <p>
-          If you want to clear the password, click the "🧹 Clear password"
-          button. After 30 seconds, the password will be cleared automatically
-          if you don't clear it manually. This is a security measure to prevent
-          your password from being exposed for too long.
-        </p>
+            <h2>📜 How to use this version</h2>
 
-        <p>
-          <strong>Pro tip</strong>: Backup this page file in your favorite cloud
-          storage.
-        </p>
+            <p>
+              If you want to use it offline, click the button
+              <i>"⬇️ Download this page"</i> at the top and open the page file
+              in your browser(I recommend Chrome).
+            </p>
+            <p>
+              Fill the form and click the "⚡ Generate and copy" button. If the
+              password is not copied, try clicking the "👀 Show password" button
+              and then copy it manually.
+            </p>
+            <p>
+              If you want to generate a new password, just change the counter
+              value and click "⚡ Generate and copy" again.
+            </p>
+            <p>
+              If you want to clear the form, click the "🧹 Clear" button. After
+              30 seconds, the form will be cleared automatically if you don't
+              clear it manually. This is a security measure to prevent your
+              password from being exposed for too long.
+            </p>
 
-        <h2>🤔 How it works</h2>
+            <p>
+              <strong>Pro tip</strong>: Backup this page file in your favorite
+              cloud storage or usb storage.
+            </p>
 
-        <p>
-          You can know how it work
-          <a
-            href="https://blog.lesspass.com/2016-10-19/how-does-it-work"
-            target="_blank"
-            >here</a
-          >.
-        </p>
+            <h2>🤔 How it works</h2>
+
+            <p>
+              You can know how it work
+              <a
+                href="https://blog.lesspass.com/2016-10-19/how-does-it-work"
+                target="_blank"
+                >here</a
+              >.
+            </p>
+
+            <small>
+              <strong>Disclaimer:</strong> This is a standalone version of the
+              Lesspass password manager. It is not affiliated with the official
+              Lesspass project.
+            </small>
+          </div>
+        </details>
+
+        <br />
       </div>
     </main>
 
@@ -164,15 +175,18 @@
     <footer>
       <hr />
       <br />
-      <a
-        href="https://github.com/RodrigoWebDev/lessPass-standalone-html"
-        target="_blank"
-        >&lt;/&gt; Source code 🐱</a
-      >
-      developed by
-      <a href="https://github.com/RodrigoWebDev" target="_blank"
-        >👨🏻‍💻 Rodrigo Queiroz</a
-      >
+
+      <div class="ta-c">
+        <a
+          href="https://github.com/RodrigoWebDev/lessPass-standalone-html"
+          target="_blank"
+          >&lt;/&gt; Source code 🐱</a
+        >
+        developed by
+        <a href="https://github.com/RodrigoWebDev" target="_blank"
+          >👨🏻‍💻 Rodrigo Queiroz</a
+        >
+      </div>
       <br />
     </footer>
 

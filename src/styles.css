@@ -29,9 +29,22 @@ html {
   scrollbar-width: thin;
 }
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
-    "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    "Segoe UI Emoji",
+    "Apple Color Emoji",
+    "Noto Color Emoji",
+    sans-serif;
   line-height: 1.4;
   max-width: 800px;
   margin: 20px auto;
@@ -44,18 +57,28 @@ body {
   text-rendering: optimizeLegibility;
 }
 button {
-  transition: background-color 0.1s linear, border-color 0.1s linear,
-    color 0.1s linear, box-shadow 0.1s linear, transform 0.1s ease;
-  transition: background-color var(--animation-duration) linear,
+  transition:
+    background-color 0.1s linear,
+    border-color 0.1s linear,
+    color 0.1s linear,
+    box-shadow 0.1s linear,
+    transform 0.1s ease;
+  transition:
+    background-color var(--animation-duration) linear,
     border-color var(--animation-duration) linear,
     color var(--animation-duration) linear,
     box-shadow var(--animation-duration) linear,
     transform var(--animation-duration) ease;
 }
 input {
-  transition: background-color 0.1s linear, border-color 0.1s linear,
-    color 0.1s linear, box-shadow 0.1s linear, transform 0.1s ease;
-  transition: background-color var(--animation-duration) linear,
+  transition:
+    background-color 0.1s linear,
+    border-color 0.1s linear,
+    color 0.1s linear,
+    box-shadow 0.1s linear,
+    transform 0.1s ease;
+  transition:
+    background-color var(--animation-duration) linear,
     border-color var(--animation-duration) linear,
     color var(--animation-duration) linear,
     box-shadow var(--animation-duration) linear,
@@ -116,7 +139,6 @@ a[href^="sms\:"]::before {
   content: "💬 ";
 }
 button,
-
 input[type="button"],
 input[type="checkbox"],
 input[type="radio"],
@@ -222,7 +244,6 @@ label {
   display: inline-block;
 }
 button,
-
 input:not([type="checkbox"]):not([type="radio"]),
 input[type="range"] {
   -webkit-appearance: none;
@@ -283,7 +304,9 @@ input[type="range"]::-webkit-slider-runnable-track {
   border-radius: 3px;
 }
 input[type="range"]::-webkit-slider-thumb {
-  box-shadow: 0 1px 1px #000, 0 0 1px #0d0d0d;
+  box-shadow:
+    0 1px 1px #000,
+    0 0 1px #0d0d0d;
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -306,7 +329,9 @@ input[type="range"]::-moz-range-track {
   border-radius: 3px;
 }
 input[type="range"]::-moz-range-thumb {
-  box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+  box-shadow:
+    1px 1px 1px #000,
+    0 0 1px #0d0d0d;
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -326,17 +351,23 @@ input[type="range"]::-ms-fill-lower {
   background: var(--background);
   border: 0.2px solid #010101;
   border-radius: 3px;
-  box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+  box-shadow:
+    1px 1px 1px #000,
+    0 0 1px #0d0d0d;
 }
 input[type="range"]::-ms-fill-upper {
   background: #161f27;
   background: var(--background);
   border: 0.2px solid #010101;
   border-radius: 3px;
-  box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+  box-shadow:
+    1px 1px 1px #000,
+    0 0 1px #0d0d0d;
 }
 input[type="range"]::-ms-thumb {
-  box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+  box-shadow:
+    1px 1px 1px #000,
+    0 0 1px #0d0d0d;
   border: 1px solid #000;
   height: 20px;
   width: 20px;
@@ -421,18 +452,38 @@ a:hover {
   .md\:d-f {
     display: flex;
   }
-  
+
   .md\:g-24px {
     gap: 24px;
   }
-  
-  .md\:w-50\%{
+
+  .md\:w-50\% {
     width: 50%;
   }
 
   .md\:d-n {
     display: none;
   }
+}
+
+.mw-600px {
+  max-width: 600px;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.c-p {
+  cursor: pointer;
+}
+
+.d-i {
+  display: inline;
+}
+
+.ta-c {
+  text-align: center;
 }
 
 * {
@@ -474,26 +525,54 @@ button {
 
 #snackbar.show {
   visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  -webkit-animation:
+    fadein 0.5s,
+    fadeout 0.5s 2.5s;
+  animation:
+    fadein 0.5s,
+    fadeout 0.5s 2.5s;
 }
 
 @-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
 }
 
 @keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }
 
 @keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }
