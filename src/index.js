@@ -46,7 +46,7 @@ const clearForm = () => {
   isPasswordVisible = false;
 };
 
-const resetFormAfterSeconds = (seconds = 5) => {
+const resetFormAfterSeconds = (seconds = 30) => {
   clearPasswordTimeout = setTimeout(() => {
     clearForm();
   }, seconds * 1000);
